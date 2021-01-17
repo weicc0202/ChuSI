@@ -26,4 +26,5 @@ class BasicAgent():
         else:
             replyMessage = 'Sorry, Peko cannot understand what you said...'
         
-        return (self.botApi.reply_message, (replyToken, replyMessage))
+        replyObject = TextSendMessage(text=replyMessage)
+        return (self.botApi.reply_message, (replyToken, replyObject))
