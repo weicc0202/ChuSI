@@ -11,12 +11,7 @@
 #  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #  License for the specific language governing permissions and limitations
 #  under the License.
-
-import os
-import sys
-from argparse import ArgumentParser
-
-from flask import Flask, request, abort
+from agent import BasicAgent
 from linebot import (
     LineBotApi, WebhookHandler
 )
@@ -26,7 +21,10 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
-
+from flask import Flask, request, abort
+from argparse import ArgumentParser
+import os
+import sys
 app = Flask(__name__)
 
 # get channel_secret and channel_access_token from your environment variable
@@ -38,10 +36,11 @@ if channel_secret is None:
 if channel_access_token is None:
     print('Specify LINE_CHANNEL_ACCESS_TOKEN as environment variable.')
     sys.exit(1)
-
+resume_path = 'template.json'
 line_bot_api = LineBotApi(channel_access_token)
 handler = WebhookHandler(channel_secret)
-
+basicAgent = BasicAgent(botApi=line_bot_api)
+basicAgent.parseResume(resume_path)
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -63,11 +62,9 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def message_text(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text)
-    )
-
+    action, paras = basicAgent.selectAction(event)
+    action(paras)
+    return
 
 if __name__ == "__main__":
     arg_parser = ArgumentParser(
