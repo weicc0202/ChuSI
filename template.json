@@ -1,1 +1,16 @@
-{"name": "Weichu", "works": {"tsmc": "intern", "mtk": "intern"}, "education": {"ms": "ntuee", "bs": "nthucs"}, "skills": {"software": "C, C++", "hardware": "Verilog"}, "others": {}}
+{
+    "name": "Weichu",
+    "works": {
+        "tsmc": "intern",
+        "mtk": "intern"
+    },
+    "education": {
+        "ms": "ntuee",
+        "bs": "nthucs"
+    },
+    "skills": {
+        "software": "C, C++",
+        "hardware": "Verilog"
+    },
+    "others": {}
+}

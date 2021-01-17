@@ -14,6 +14,7 @@ class BasicAgent():
     def parseResume(self, filename):
         self.resume = EnglishResume(filename=filename)
 
+    # RETURN TYPE: (MESSAGEAPI_TO_SEND, MESSAGEAPI_PARAS)
     def selectAction(self, event):
         replyToken, message = event.reply_token, event.message.text
         replyMessage = ''

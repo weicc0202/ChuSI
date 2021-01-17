@@ -19,7 +19,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
+    FollowEvent, MessageEvent, TextMessage, TextSendMessage,
 )
 from flask import Flask, request, abort
 from argparse import ArgumentParser
@@ -59,11 +59,17 @@ def callback():
 
     return 'OK'
 
+@handler.add(FollowEvent)
+def handle_follow(events):
+    for event in events:
+        to = event.source.userId
+        line_bot_api.push_message(to, TextSendMessage(text='Hello World!')) 
 
 @handler.add(MessageEvent, message=TextMessage)
-def message_text(event):
-    action, paras = basicAgent.selectAction(event)
-    action(*paras)
+def message_text(events):
+    for event in events:
+        action, paras = basicAgent.selectAction(event)
+        action(*paras)
     return
 
 if __name__ == "__main__":

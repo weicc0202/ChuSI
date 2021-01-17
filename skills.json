@@ -1,0 +1,13 @@
+{
+    "Software":[
+        "Languages: C, C++, Python, Javascript, Java, HTML, CSS",
+        "System level: LLVM, OpenMP, CUDA, Hadoop, Spark, Socket",
+        "Framework: React, ReactJs, Flask, Pytorch, AWS, k8s, GCP",
+        "Environment: unix, vim, git, shell script, makefile, SQL"
+    ],
+    "Hardware":[
+        "Languages: Verilog, Assembly",
+        "Digiral Design Flow: Simulation, Synthesis, APR"
+    ],
+    "summary": "Weichu has various abilities from sofware application to hardware implementation."
+}

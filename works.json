@@ -1,0 +1,21 @@
+{
+    "MediaTek-ASIC, Hsinchu":[
+        "Duration: 2019.07 - 2019.8",
+        "Title: Software Engineer Intern",
+        "- Shorten development time of validation program from days to few minutes.",
+        "- Builded up an automation flow for measurement of DRAM signals."
+    ],
+    "MediaTek-CTD, Hsinchu":[
+        "Duration: 2020.07 - 2020.09",
+        "Title: Software Engineer Intern",
+        "- Researched recent works for FTM measurement.",
+        "- Designed system for data collection of FTM measurement with robot system."
+    ],
+    "Startup-Eagle, Taipei":[
+        "Duration: 2020.10 - 2021.02",
+        "Title: QA Engineer Intern",
+        "- Produced boundary cases to ensure software quality.",
+        "- Builded up an end to end (E2E) testing plan and researched for testing framework with Electron."
+    ],
+    "summary": "During Weichu's career, he's gained several experience in IC industry and App Startup."
+}
