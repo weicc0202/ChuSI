@@ -63,7 +63,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def message_text(event):
     action, paras = basicAgent.selectAction(event)
-    action(paras)
+    action(*paras)
     return
 
 if __name__ == "__main__":
