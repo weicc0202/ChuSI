@@ -61,7 +61,7 @@ def callback():
 
 @handler.add(FollowEvent)
 def handle_follow(event):
-    to = event.source.userId
+    to = event.source.user_id
     line_bot_api.push_message(to, TextSendMessage(text='Hello World!')) 
 
 @handler.add(MessageEvent, message=TextMessage)
