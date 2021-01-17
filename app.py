@@ -61,13 +61,17 @@ def callback():
 
 @handler.add(FollowEvent)
 def handle_follow(event):
+    print('Event: ', event)
     to = event.source.user_id
     line_bot_api.push_message(to, TextSendMessage(text='Hello World!')) 
 
 @handler.add(MessageEvent, message=TextMessage)
 def message_text(event):
+    print('Event: ', event)
     action, paras = basicAgent.selectAction(event)
     action(*paras)
+
+
 
 if __name__ == "__main__":
     arg_parser = ArgumentParser(
