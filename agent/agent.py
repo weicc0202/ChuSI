@@ -16,10 +16,7 @@ class BasicAgent():
 
     def welcome(self, event):
         to, message = event.source.user_id, self.resume.welcome()
-        self.botApi.push_message(
-            to, 
-            message
-        ) 
+        self.botApi.push_message(to, message) 
     
     def reply(self, event):
         replyToken, message = event.reply_token, event.message.text
@@ -34,4 +31,6 @@ class BasicAgent():
             replyMessage = TextSendMessage(text='Sorry, Peko cannot understand what you said...')
 
         self.botApi.reply_message(replyToken, replyMessage)
-        self.botApi.reply_message(replyToken, TextSendMessage(text='Pekopekopekopeko'))
+
+        to, message = event.source.user_id, TextSendMessage(text='Pekopekopekopeko')
+        self.botApi.push_message(to, message) 
