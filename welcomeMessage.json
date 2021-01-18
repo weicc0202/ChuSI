@@ -89,10 +89,6 @@
             "label": "Show Skills",
             "text": "Show Skills"
           }
-        },
-        {
-          "type": "spacer",
-          "size": "sm"
         }
       ],
       "flex": 0
