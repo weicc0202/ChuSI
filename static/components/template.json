@@ -7,7 +7,7 @@
     },
     "education": {
         "entry":"educationMessage.json",
-        "details":["ntu.json", "nthu.json"]
+        "details":["ntugiee.json", "nthucs.json"]
     },
     "skills": {
         "entry":"skillMessage.json",
