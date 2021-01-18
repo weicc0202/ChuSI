@@ -19,10 +19,11 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    FollowEvent, MessageEvent, TextMessage, TextSendMessage,
+    FollowEvent, MessageEvent, TextMessage, TextSendMessage, FlexSendMessage
 )
 from flask import Flask, request, abort
 from argparse import ArgumentParser
+import json
 import os
 import sys
 app = Flask(__name__)
@@ -59,11 +60,22 @@ def callback():
 
     return 'OK'
 
+def getMessageContent(filename=None):
+    if not filename:
+        return None
+
+    content = None
+    with open(filename, 'r') as f:
+        content = json.loads(f.read())
+    return content
+
 @handler.add(FollowEvent)
 def handle_follow(event):
     print('Event: ', event)
     to = event.source.user_id
-    line_bot_api.push_message(to, TextSendMessage(text='Hello World!')) 
+    line_bot_api.push_message(to, FlexSendMessage(alt_text='Hello!', contents=getMessageContent('welcomeMessage.json'))) 
+    
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def message_text(event):

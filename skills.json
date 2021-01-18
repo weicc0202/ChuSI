@@ -7,7 +7,8 @@
     ],
     "Hardware":[
         "Languages: Verilog, Assembly",
-        "Digiral Design Flow: Simulation, Synthesis, APR"
+        "Digiral Design Flow: Simulation, Synthesis, APR",
+        "Related cources: Physical design, SOC Verification, CVSD (ICLAB)"
     ],
     "summary": "Weichu has various abilities from sofware application to hardware implementation."
 }
