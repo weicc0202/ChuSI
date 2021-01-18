@@ -1,0 +1,119 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "size": "micro",
+        "direction": "ltr",
+        "hero": {
+          "type": "image",
+          "url": "https://imgur.com/uGnnWvU.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Software skills",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Programming related",
+                  "size": "xs"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "Show Details",
+                    "text": "Show Software skills"
+                  },
+                  "margin": "none",
+                  "style": "link",
+                  "gravity": "center",
+                  "offsetBottom": "none"
+                }
+              ]
+            }
+          ],
+          "spacing": "none",
+          "paddingAll": "13px",
+          "borderWidth": "none"
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "direction": "ltr",
+        "hero": {
+          "type": "image",
+          "url": "https://imgur.com/OnA1oe5.jpg",
+          "size": "full",
+          "aspect_mode": "cover",
+          "aspect_ratio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Hardware skills",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Digital IC related",
+                  "size": "xs"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "Show Details",
+                    "text": "Show Hardware skills"
+                  },
+                  "margin": "none",
+                  "style": "link",
+                  "gravity": "center",
+                  "offsetBottom": "none"
+                }
+              ]
+            }
+          ],
+          "spacing": "none",
+          "paddingAll": "13px",
+          "borderWidth": "none"
+        }
+      }
+    ]
+  }

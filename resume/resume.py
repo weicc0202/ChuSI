@@ -1,10 +1,14 @@
-import json
+from access.access import readJson
 import sys
+import os
+from linebot.models import (
+    TextSendMessage, FlexSendMessage
+)
 
 class EnglishResume():
     def __init__(self, filename=None):
         self.filename = filename
-        self.content = None
+        self.content = {}
         
         if self.filename:
             self.content = self.loadResume(self.filename)
@@ -16,12 +20,38 @@ class EnglishResume():
         return True
     
     def loadResume(self, filename):
-        dumpedResume = None
-        with open(filename, 'r') as f:
-            dumpedResume = json.loads(f.read())
-        return dumpedResume
+        fields = {
+            "welcome": None,
+            'works': {"entry": None, "details": None},
+            'education': {"entry": None, "details": None},
+            'skills': {"entry": None, "details": None},
+        }
+        path = os.path.split(filename)[0]
+        titles = ['works', 'education', 'skills']
+        template = readJson(filename)
+
+        fields['welcome'] = readJson(os.path.join(path, template['welcome']))
+        for title in titles:
+            fields[title]['entry'] = readJson(os.path.join(path, template[title]['entry']))
+            fields[title]['details'] = readJson(os.path.join(path, template[title]['details']))
+        return fields
         
-        
+    def welcome(self):
+        message = self.content['welcome']
+        return FlexSendMessage(alt_text='Hello!', contents=message)
+
+    def workEntry(self):
+        message = self.content['works']['entry']
+        return FlexSendMessage(alt_text='Hello!', contents=message)
+
+    def eduEntry(self):
+        message = self.content['education']['entry']
+        return FlexSendMessage(alt_text='Hello!', contents=message)
+
+    def skillEntry(self):
+        message = self.content['skills']['entry']
+        return FlexSendMessage(alt_text='Hello!', contents=message)
+    '''
     def works(self):
         name, experience = self.content['name'], self.content['works']
         message = '%s had some work experience in: \n' % (name)
@@ -42,6 +72,7 @@ class EnglishResume():
         for key, value in skills.items():
             message += '\tFor %s field, he has %s abilities.\n' % (key, value)
         return message
+    '''
 
 if __name__ == '__main__':
     resumePath = 'template.json'

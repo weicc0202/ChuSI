@@ -11,7 +11,7 @@
 #  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #  License for the specific language governing permissions and limitations
 #  under the License.
-from agent import BasicAgent
+from agent.agent import BasicAgent
 from linebot import (
     LineBotApi, WebhookHandler
 )
@@ -26,6 +26,7 @@ from argparse import ArgumentParser
 import json
 import os
 import sys
+
 app = Flask(__name__)
 
 # get channel_secret and channel_access_token from your environment variable
@@ -37,11 +38,13 @@ if channel_secret is None:
 if channel_access_token is None:
     print('Specify LINE_CHANNEL_ACCESS_TOKEN as environment variable.')
     sys.exit(1)
-resume_path = 'template.json'
+
+
+resume_path = './static/components'
 line_bot_api = LineBotApi(channel_access_token)
 handler = WebhookHandler(channel_secret)
-basicAgent = BasicAgent(botApi=line_bot_api)
-basicAgent.parseResume(resume_path)
+agent = BasicAgent(botApi=line_bot_api)
+agent.parseResume(os.path.join(resume_path, 'template.json'))
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -60,30 +63,17 @@ def callback():
 
     return 'OK'
 
-def getMessageContent(filename=None):
-    if not filename:
-        return None
-
-    content = None
-    with open(filename, 'r') as f:
-        content = json.loads(f.read())
-    print(content)
-    return content
 
 @handler.add(FollowEvent)
 def handle_follow(event):
     print('Event: ', event)
-    to = event.source.user_id
-    contents = getMessageContent(filename='welcomeMessage.json')
-    line_bot_api.push_message(to, FlexSendMessage(alt_text='Hello!', contents=contents)) 
+    agent.welcome(event)
+ 
     
-
-
 @handler.add(MessageEvent, message=TextMessage)
 def message_text(event):
     print('Event: ', event)
-    action, paras = basicAgent.selectAction(event)
-    action(*paras)
+    agent.reply(event)
 
 
 

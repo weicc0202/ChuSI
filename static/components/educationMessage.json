@@ -1,0 +1,119 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "size": "micro",
+        "direction": "ltr",
+        "hero": {
+          "type": "image",
+          "url": "https://imgur.com/6DFPTOW.jpg",
+          "size": "full",
+          "aspect_mode": "cover",
+          "aspect_ratio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "National Taiwan University",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "MS. GIEE, 2019-",
+                  "size": "xs"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "Show Details",
+                    "text": "Show NTU"
+                  },
+                  "margin": "none",
+                  "style": "link",
+                  "gravity": "center",
+                  "offsetBottom": "none"
+                }
+              ]
+            }
+          ],
+          "spacing": "none",
+          "paddingAll": "13px",
+          "borderWidth": "none"
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "direction": "ltr",
+        "hero": {
+          "type": "image",
+          "url": "https://imgur.com/E8GkbST.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "National Tsing Hua University",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "BS. CS, 2015-2019",
+                  "size": "xs"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "Show Details",
+                    "text": "Show NTHU"
+                  },
+                  "margin": "none",
+                  "style": "link",
+                  "gravity": "center",
+                  "offsetBottom": "none"
+                }
+              ]
+            }
+          ],
+          "spacing": "none",
+          "paddingAll": "13px",
+          "borderWidth": "none"
+        }
+      }
+    ]
+  }

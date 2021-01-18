@@ -1,0 +1,164 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://imgur.com/t9wAEka.jpg",
+          "size": "full",
+          "aspect_mode": "cover",
+          "aspect_ratio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "MediaTek, ASIC",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Software Intern"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "Show Details",
+                    "text": "Show MediaTek ASIC"
+                  },
+                  "margin": "none",
+                  "height": "sm",
+                  "style": "link"
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://imgur.com/TIMGv2p.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "MediaTek, CTD",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Software Intern"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "Show Details",
+                    "text": "Show MediaTek CTD"
+                  },
+                  "margin": "none",
+                  "height": "sm",
+                  "style": "link"
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://imgur.com/kGDWj4E.png",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Eagle, Startup",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "QA Intern"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "Show Details",
+                    "text": "Show Eagle"
+                  },
+                  "margin": "none",
+                  "height": "sm",
+                  "style": "link"
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        }
+      }
+    ]
+  }

@@ -1,0 +1,17 @@
+{
+    "name": "Weichu",
+    "welcome": "welcomeMessage.json",
+    "works": {
+        "entry":"workMessage.json",
+        "details":"workDetails.json"
+    },
+    "education": {
+        "entry":"educationMessage.json",
+        "details":"educationDetails.json"
+    },
+    "skills": {
+        "entry":"skillMessage.json",
+        "details":"skillDetails.json"
+    },
+    "others": ""
+}
