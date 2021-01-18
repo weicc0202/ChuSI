@@ -7,7 +7,7 @@
         "direction": "ltr",
         "hero": {
           "type": "image",
-          "url": "lads.png",
+          "url": "https://imgur.com/N0Hpudq.png",
           "size": "full",
           "aspect_mode": "cover",
           "aspect_ratio": "320:213"
