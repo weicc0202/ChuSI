@@ -24,13 +24,13 @@ class BasicAgent():
         if message == 'Show Work Experience':
             replyMessage = self.resume.wrapMessage(title='works')
         elif message == 'Show Education':
-            replyMessage = self.resume.wrapMessage(title='edu')
+            replyMessage = self.resume.wrapMessage(title='education')
         elif message == 'Show Skills':
             replyMessage = self.resume.wrapMessage(title='skills')
         elif message == 'Show NTU':
-            replyMessage = self.resume.wrapMessage(title='edu', types='ntugiee')
+            replyMessage = self.resume.wrapMessage(title='education', types='ntugiee')
         elif message == 'Show NTHU':
-            replyMessage = self.resume.wrapMessage(title='edu', types='nthucs')
+            replyMessage = self.resume.wrapMessage(title='education', types='nthucs')
         elif message == 'Show MediaTek ASIC':
             replyMessage = self.resume.wrapMessage(title='works', types='mtkasic')
         elif message == 'Show MediaTek CTD':
@@ -38,9 +38,9 @@ class BasicAgent():
         elif message == 'Show Eagle':
             replyMessage = self.resume.wrapMessage(title='works', types='eagle')
         elif message == 'Show Software skills':
-            replyMessage = self.resume.wrapMessage(title='education', types='software')
+            replyMessage = self.resume.wrapMessage(title='skills', types='software')
         elif message == 'Show Hardware skills':
-            replyMessage = self.resume.wrapMessage(title='education', types='hardware')
+            replyMessage = self.resume.wrapMessage(title='skills', types='hardware')
         else:
             replyMessage = TextSendMessage(text='Sorry, Peko cannot understand what you said...')
 
