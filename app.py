@@ -74,7 +74,8 @@ def getMessageContent(filename=None):
 def handle_follow(event):
     print('Event: ', event)
     to = event.source.user_id
-    line_bot_api.push_message(to, FlexSendMessage(alt_text='Hello!', contents=getMessageContent('welcomeMessage.json'))) 
+    contents = getMessageContent(filename='welcomeMessage.json')
+    line_bot_api.push_message(to, FlexSendMessage(alt_text='Hello!', contents=contents)) 
     
 
 
