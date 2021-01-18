@@ -33,9 +33,17 @@ class EnglishResume():
         fields['welcome'] = readJson(os.path.join(path, template['welcome']))
         for title in titles:
             fields[title]['entry'] = readJson(os.path.join(path, template[title]['entry']))
-            fields[title]['details'] = readJson(os.path.join(path, template[title]['details']))
+            fields[title]['details'] = {f.split('.')[0]: readJson(os.path.join(path, f) for f in template[title]['details']}
         return fields
         
+    def wrapMessage(self, title, types='entry'):
+        content = None
+        if types == 'entry':
+            content = self.content[title][types]
+        else:
+            content = self.content[title]['details'][types]
+        return FlexSendMessage(alt_text='Hello!', contents=content)
+
     def welcome(self):
         message = self.content['welcome']
         return FlexSendMessage(alt_text='Hello!', contents=message)

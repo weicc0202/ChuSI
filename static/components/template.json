@@ -3,15 +3,15 @@
     "welcome": "welcomeMessage.json",
     "works": {
         "entry":"workMessage.json",
-        "details":"workDetails.json"
+        "details":["mtkasic.json", "mtkctd.json", "eagle.json"]
     },
     "education": {
         "entry":"educationMessage.json",
-        "details":"educationDetails.json"
+        "details":["ntu.json", "nthu.json"]
     },
     "skills": {
         "entry":"skillMessage.json",
-        "details":"skillDetails.json"
+        "details":["software.json", "hardware.json"]
     },
     "others": ""
 }

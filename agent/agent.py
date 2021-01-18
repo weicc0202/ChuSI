@@ -22,11 +22,25 @@ class BasicAgent():
         replyToken, message = event.reply_token, event.message.text
         replyMessage = None
         if message == 'Show Work Experience':
-            replyMessage = self.resume.workEntry()
+            replyMessage = self.resume.wrapMessage(title='works')
         elif message == 'Show Education':
-            replyMessage = self.resume.eduEntry()
+            replyMessage = self.resume.wrapMessage(title='edu')
         elif message == 'Show Skills':
-            replyMessage = self.resume.skillEntry()
+            replyMessage = self.resume.wrapMessage(title='skills')
+        elif message == 'Show NTU':
+            replyMessage = self.resume.wrapMessage(title='edu', types='ntugiee')
+        elif message == 'Show NTHU':
+            replyMessage = self.resume.wrapMessage(title='edu', types='nthucs')
+        elif message == 'Show MediaTek ASIC':
+            replyMessage = self.resume.wrapMessage(title='works', types='mtkasic')
+        elif message == 'Show MediaTek CTD':
+            replyMessage = self.resume.wrapMessage(title='works', types='mtkvyf')
+        elif message == 'Show Eagle':
+            replyMessage = self.resume.wrapMessage(title='edu', types='eagle')
+        elif message == 'Show Software skills':
+            replyMessage = self.resume.wrapMessage(title='edu', types='software')
+        elif message == 'Show Hardware skills':
+            replyMessage = self.resume.wrapMessage(title='edu', types='hardware')
         else:
             replyMessage = TextSendMessage(text='Sorry, Peko cannot understand what you said...')
 
