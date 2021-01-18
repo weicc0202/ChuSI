@@ -67,6 +67,7 @@ def getMessageContent(filename=None):
     content = None
     with open(filename, 'r') as f:
         content = json.loads(f.read())
+    print(content)
     return content
 
 @handler.add(FollowEvent)
