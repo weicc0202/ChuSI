@@ -34,4 +34,4 @@ class BasicAgent():
             replyMessage = TextSendMessage(text='Sorry, Peko cannot understand what you said...')
 
         self.botApi.reply_message(replyToken, replyMessage)
-
+        self.botApi.reply_message(replyToken, TextSendMessage(text='Pekopekopekopeko'))
