@@ -34,13 +34,13 @@ class BasicAgent():
         elif message == 'Show MediaTek ASIC':
             replyMessage = self.resume.wrapMessage(title='works', types='mtkasic')
         elif message == 'Show MediaTek CTD':
-            replyMessage = self.resume.wrapMessage(title='works', types='mtkvyf')
+            replyMessage = self.resume.wrapMessage(title='works', types='mtkctd')
         elif message == 'Show Eagle':
-            replyMessage = self.resume.wrapMessage(title='edu', types='eagle')
+            replyMessage = self.resume.wrapMessage(title='works', types='eagle')
         elif message == 'Show Software skills':
-            replyMessage = self.resume.wrapMessage(title='edu', types='software')
+            replyMessage = self.resume.wrapMessage(title='education', types='software')
         elif message == 'Show Hardware skills':
-            replyMessage = self.resume.wrapMessage(title='edu', types='hardware')
+            replyMessage = self.resume.wrapMessage(title='education', types='hardware')
         else:
             replyMessage = TextSendMessage(text='Sorry, Peko cannot understand what you said...')
 
