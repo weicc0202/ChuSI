@@ -33,7 +33,10 @@ class EnglishResume():
         fields['welcome'] = readJson(os.path.join(path, template['welcome']))
         for title in titles:
             fields[title]['entry'] = readJson(os.path.join(path, template[title]['entry']))
-            fields[title]['details'] = {f.split('.')[0]: readJson(os.path.join(path, f) for f in template[title]['details']}
+            fileds[title]['details'] = {}
+            for name in template[title]['details']:
+                filename = name.split('.')[0]
+                fileds[title]['details'][filename] = readJson(os.path.join(path, filename))
         return fields
         
     def wrapMessage(self, title, types='entry'):
