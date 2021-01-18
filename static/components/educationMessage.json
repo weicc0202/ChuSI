@@ -7,7 +7,7 @@
         "direction": "ltr",
         "hero": {
           "type": "image",
-          "url": "./static/images/lads.png",
+          "url": "../static/images/lads.png",
           "size": "full",
           "aspect_mode": "cover",
           "aspect_ratio": "320:213"
