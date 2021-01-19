@@ -20,8 +20,8 @@ class EnglishResume():
             'mtkasic': ('MediaTek-ASIC', 'Show MediaTek ASIC'),
             'mtkctd': ('MediaTek-CTD', 'Show MediaTek CTD'),
             'eagle': ('Eagle', 'Show Eagle'),
-            'software': ('Software Skills', 'Show Software Skills'),
-            'hardware': ('Hardware Skills', 'Show Hardware Skills'),
+            'software': ('Software Skills', 'Show Software skills'),
+            'hardware': ('Hardware Skills', 'Show Hardware skills'),
         }
         if self.filename:
             self.content = self.loadResume(self.filename)
