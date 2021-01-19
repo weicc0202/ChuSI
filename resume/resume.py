@@ -121,6 +121,3 @@ class EnglishResume():
 if __name__ == '__main__':
     resumePath = 'template.json'
     resume = EnglishResume(filename=resumePath)
-    print(resume.works())
-    print(resume.edu())
-    print(resume.skills())
