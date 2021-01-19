@@ -1,5 +1,5 @@
 from resume.resume import EnglishResume
-from upload import updateLogs
+from agent.upload import updateLogs
 from linebot.models import (
     TextSendMessage, FlexSendMessage
 )
