@@ -3,6 +3,7 @@ import boto3
 import uuid
 import os
 import sys
+import time
 
 def checkAWSValid():
     aws_access_id = os.getenv('AWS_ACCESS_KEY_ID', None)
@@ -23,7 +24,8 @@ def updateLogs(userId, types, db=None):
        Item={
             'tid': uuid.uuid4().hex,
             'userId': userId,
-            'types': types
+            'types': types,
+            'timestamp': time.time()
         }
     )
     return response
