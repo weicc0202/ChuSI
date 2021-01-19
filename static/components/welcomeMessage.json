@@ -30,16 +30,6 @@
             {
               "type": "box",
               "layout": "baseline",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "Hello! I'm Weichu."
-                }
-              ]
-            },
-            {
-              "type": "box",
-              "layout": "baseline",
               "spacing": "sm",
               "contents": [
                 {

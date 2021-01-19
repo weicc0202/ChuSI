@@ -1,6 +1,6 @@
 from resume.resume import EnglishResume
 from linebot.models import (
-    TextSendMessage,
+    TextSendMessage, ImageSendMessage
 )
 import os
 import sys
@@ -15,7 +15,14 @@ class BasicAgent():
         self.resume = EnglishResume(filename=filename)
 
     def welcome(self, event):
+        imageUrl = 'https://imgur.com/a/q9hlgrZ.jpg'
         to, message = event.source.user_id, self.resume.welcome()
+        self.botApi.push_message(to, TextSendMessage(text="Hello! I'm Weichu."))
+        self.botApi.push_message(to, TextSendMessage(text="Nice to meet you."))
+        self.botApi.push_message(to, ImageSendMessage(
+            original_content_url=imageUrl,
+            preview_image_url=imageUrl
+        ))
         self.botApi.push_message(to, message) 
     
     def __reply(self, event, messages):
@@ -33,8 +40,8 @@ class BasicAgent():
     def reply(self, event):
         replyToken, message = event.reply_token, event.message.text
         replyMessage = []
-        if message == 'Show Welcome':
-            replyMessage += [self.resume.welcome()]
+        if message == 'Show Others':
+            replyMessage += [self.resume.wrapMessage(title='others')]
         elif message == 'Show Work Experience':
             replyMessage += [self.resume.wrapMessage(title='works')]
         elif message == 'Show Education':
@@ -70,6 +77,12 @@ class BasicAgent():
             replyMessage += [self.resume.wrapMessage(title='skills', types=types)]
             replyMessage += [self.resume.suggest(types=types)]
         else:
-            replyMessage += [TextSendMessage(text='Sorry, Peko cannot understand what you said...')]
-
+            qrcode = 'https://imgur.com/32eTpuX.png'
+            replyMessage += [TextSendMessage(text='Sorry, I cannot understand...')]
+            replyMessage += [TextSendMessage(text='Check out my Github to follow the latest feature and future plan.')]
+            replyMessage += [ImageSendMessage(
+                original_content_url=qrcode,
+                preview_image_url=qrcode
+            )]
+            replyMessage += [self.resume.wrapMessage(title='others')]
         self.__reply(event, replyMessage)

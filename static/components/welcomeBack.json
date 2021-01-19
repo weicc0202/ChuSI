@@ -6,8 +6,8 @@
       "contents": [
         {
           "type": "text",
-          "text": "Maybe you're interested in:",
-          "size": "md"
+          "text": "Glad to see you again. What would you like to know:",
+          "wrap": true
         }
       ]
     },
@@ -32,8 +32,18 @@
           "height": "sm",
           "action": {
             "type": "message",
-            "label": "Others",
-            "text": "Show Others"
+            "label": "Work Experience",
+            "text": "Show Works"
+          }
+        },
+        {
+          "type": "button",
+          "style": "link",
+          "height": "sm",
+          "action": {
+            "type": "message",
+            "label": "Skills",
+            "text": "Show Skills"
           }
         }
       ],

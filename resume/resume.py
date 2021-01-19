@@ -45,6 +45,7 @@ class EnglishResume():
 
         fields['welcome'] = readJson(os.path.join(path, template['welcome']))
         fields['suggest'] = readJson(os.path.join(path, template['suggest']))
+        fields['others'] = readJson(os.path.join(path, template['others']))
         for title in titles:
             fields[title]['entry'] = readJson(os.path.join(path, template[title]['entry']))
             fields[title]['details'] = {}
@@ -55,7 +56,9 @@ class EnglishResume():
         
     def wrapMessage(self, title, types='entry'):
         content = None
-        if types == 'entry':
+        if title in ['welcome', 'others']:
+            content = self.content[types]
+        elif types == 'entry':
             content = self.content[title][types]
         else:
             content = self.content[title]['details'][types]
@@ -87,6 +90,7 @@ class EnglishResume():
     def workEntry(self):
         message = self.content['works']['entry']
         return FlexSendMessage(alt_text='Hello!', contents=message)
+
 
     def eduEntry(self):
         message = self.content['education']['entry']
