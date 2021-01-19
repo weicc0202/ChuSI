@@ -57,7 +57,7 @@ class EnglishResume():
     def wrapMessage(self, title, types='entry'):
         content = None
         if title in ['welcome', 'others']:
-            content = self.content[types]
+            content = self.content[title]
         elif types == 'entry':
             content = self.content[title][types]
         else:

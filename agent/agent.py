@@ -15,7 +15,7 @@ class BasicAgent():
         self.resume = EnglishResume(filename=filename)
 
     def welcome(self, event):
-        imageUrl = 'https://imgur.com/a/q9hlgrZ.jpg'
+        imageUrl = 'https://imgur.com/a/q9hlgrZ.png'
         to, message = event.source.user_id, self.resume.welcome()
         self.botApi.push_message(to, TextSendMessage(text="Hello! I'm Weichu."))
         self.botApi.push_message(to, TextSendMessage(text="Nice to meet you."))
