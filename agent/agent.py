@@ -18,33 +18,58 @@ class BasicAgent():
         to, message = event.source.user_id, self.resume.welcome()
         self.botApi.push_message(to, message) 
     
+    def __reply(self, event, messages):
+        if not messages:
+            return
+
+        replyToken, message = event.reply_token, event.message.text
+        self.botApi.reply_message(replyToken, messages[0])
+
+        if len(messages) > 1:
+            for message in messages[1:]:
+                to = event.source.user_id
+                self.botApi.push_message(to, message) 
+
     def reply(self, event):
         replyToken, message = event.reply_token, event.message.text
-        replyMessage = None
-        if message == 'Show Work Experience':
-            replyMessage = self.resume.wrapMessage(title='works')
+        replyMessage = []
+        if message == 'Show Welcome':
+            replyMessage += [self.resume.welcome()]
+        elif message == 'Show Work Experience':
+            replyMessage += [self.resume.wrapMessage(title='works')]
         elif message == 'Show Education':
-            replyMessage = self.resume.wrapMessage(title='education')
+            replyMessage += [self.resume.wrapMessage(title='education')]
         elif message == 'Show Skills':
-            replyMessage = self.resume.wrapMessage(title='skills')
+            replyMessage += [self.resume.wrapMessage(title='skills')]
         elif message == 'Show NTU':
-            replyMessage = self.resume.wrapMessage(title='education', types='ntugiee')
+            types = 'ntugiee'
+            replyMessage += [self.resume.wrapMessage(title='education', types='ntugiee')]
+            replyMessage += [self.resume.suggest(types=types)]
         elif message == 'Show NTHU':
-            replyMessage = self.resume.wrapMessage(title='education', types='nthucs')
+            types = 'nthucs'
+            replyMessage += [self.resume.wrapMessage(title='education', types='nthucs')]
+            replyMessage += [self.resume.suggest(types=types)]
         elif message == 'Show MediaTek ASIC':
-            replyMessage = self.resume.wrapMessage(title='works', types='mtkasic')
+            types = 'mtkasic'
+            replyMessage += [self.resume.wrapMessage(title='works', types='mtkasic')]
+            replyMessage += [self.resume.suggest(types=types)]
         elif message == 'Show MediaTek CTD':
-            replyMessage = self.resume.wrapMessage(title='works', types='mtkctd')
+            types = 'mtkctd'
+            replyMessage += [self.resume.wrapMessage(title='works', types='mtkctd')]
+            replyMessage += [self.resume.suggest(types=types)]
         elif message == 'Show Eagle':
-            replyMessage = self.resume.wrapMessage(title='works', types='eagle')
+            types = 'eagle'
+            replyMessage += [self.resume.wrapMessage(title='works', types='eagle')]
+            replyMessage += [self.resume.suggest(types=types)]
         elif message == 'Show Software skills':
-            replyMessage = self.resume.wrapMessage(title='skills', types='software')
+            types = 'software'
+            replyMessage += [self.resume.wrapMessage(title='skills', types='software')]
+            replyMessage += [self.resume.suggest(types=types)]
         elif message == 'Show Hardware skills':
-            replyMessage = self.resume.wrapMessage(title='skills', types='hardware')
+            types = 'hardware'
+            replyMessage += [self.resume.wrapMessage(title='skills', types=types)]
+            replyMessage += [self.resume.suggest(types=types)]
         else:
-            replyMessage = TextSendMessage(text='Sorry, Peko cannot understand what you said...')
+            replyMessage += [TextSendMessage(text='Sorry, Peko cannot understand what you said...')]
 
-        self.botApi.reply_message(replyToken, replyMessage)
-
-        to, message = event.source.user_id, TextSendMessage(text='Pekopekopekopeko')
-        self.botApi.push_message(to, message) 
+        self.__reply(event, replyMessage)

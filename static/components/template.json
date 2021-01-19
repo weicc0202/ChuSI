@@ -13,5 +13,5 @@
         "entry":"skillMessage.json",
         "details":["software.json", "hardware.json"]
     },
-    "others": ""
+    "suggest": "suggest.json"
 }

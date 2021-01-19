@@ -1,4 +1,5 @@
 from access.access import readJson
+import random
 import sys
 import os
 from linebot.models import (
@@ -9,7 +10,19 @@ class EnglishResume():
     def __init__(self, filename=None):
         self.filename = filename
         self.content = {}
-        
+        self.titles = [['works', 'education', 'skills'],['mtkasic', 'mtkctd', 'eagle'], ['ntugiee', 'nthucs'], ['software','hardware']]
+        self.label_dict = {
+            'works': ('Work Experience', 'Show Work Experience'),
+            'education': ('Education', 'Show Education'),
+            'skills': ('Skills', 'Show Skills'),
+            'ntugiee': ('Master in NTUGIEE', 'Show NTU'),
+            'nthucs': ('BS in NTHUCS', 'Show NTHU'),
+            'mtkasic': ('MediaTek-ASIC', 'Show MediaTek ASIC'),
+            'mtkctd': ('MediaTek-CTD', 'Show MediaTek CTD'),
+            'eagle': ('Eagle', 'Show Eagle'),
+            'software': ('Software Skills', 'Show Software Skills'),
+            'hardware': ('Hardware Skills', 'Show Hardware Skills'),
+        }
         if self.filename:
             self.content = self.loadResume(self.filename)
             
@@ -31,6 +44,7 @@ class EnglishResume():
         template = readJson(filename)
 
         fields['welcome'] = readJson(os.path.join(path, template['welcome']))
+        fields['suggest'] = readJson(os.path.join(path, template['suggest']))
         for title in titles:
             fields[title]['entry'] = readJson(os.path.join(path, template[title]['entry']))
             fields[title]['details'] = {}
@@ -45,6 +59,25 @@ class EnglishResume():
             content = self.content[title][types]
         else:
             content = self.content[title]['details'][types]
+        return FlexSendMessage(alt_text='Hello!', contents=content)
+
+
+    def __suggest(self, types='works'):
+        choices = []
+        for details in self.titles:
+            if types in details:
+                index = details.index(types)
+                choices = details[0:index] + details[index+1:]
+        return random.choice(choices)
+            
+    def __suggest_label(self, label):
+        return self.label_dict[label]
+
+    def suggest(self, types='works'):
+        content = self.content['suggest']
+        label, text = self.__suggest_label(self.__suggest(types))
+        content['footer']['contents'][0]['action']['label'] = label
+        content['footer']['contents'][0]['action']['text'] = text
         return FlexSendMessage(alt_text='Hello!', contents=content)
 
     def welcome(self):
