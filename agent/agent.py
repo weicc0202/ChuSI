@@ -15,15 +15,9 @@ class BasicAgent():
         self.resume = EnglishResume(filename=filename)
 
     def welcome(self, event):
-        imageUrl = 'https://i.pinimg.com/originals/7b/39/c6/7b39c67abc82d534cc91a3e6c4cd8609.gif'
-        to, message = event.source.user_id, self.resume.welcome()
-        self.botApi.push_message(to, TextSendMessage(text="Hello! I'm Weichu."))
-        self.botApi.push_message(to, TextSendMessage(text="Nice to meet you."))
-        self.botApi.push_message(to, ImageSendMessage(
-            original_content_url=imageUrl,
-            preview_image_url=imageUrl
-        ))
-        self.botApi.push_message(to, message) 
+        to, messages = event.source.user_id, self.resume.welcome()
+        for message in messages:
+            self.botApi.push_message(to, message) 
     
     def __reply(self, event, messages):
         if not messages:

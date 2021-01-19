@@ -84,8 +84,21 @@ class EnglishResume():
         return FlexSendMessage(alt_text='Hello!', contents=content)
 
     def welcome(self):
-        message = self.content['welcome']
-        return FlexSendMessage(alt_text='Hello!', contents=message)
+        messages = []
+        messages += [TextSendMessage(text="Hello! I'm Weichu.")]
+        messages += [TextSendMessage(text="Nice to meet you.")]
+        messages += [FlexSendMessage(alt_text='Hello!', contents={
+            "type": "bubble",
+            "hero": {
+                "type": "image",
+                "url": "https://i.pinimg.com/originals/7b/39/c6/7b39c67abc82d534cc91a3e6c4cd8609.gif",
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover"
+            }
+        })]
+        messages += [FlexSendMessage(alt_text='Hello!', contents=self.content['welcome'])]
+        return messages
 
     def workEntry(self):
         message = self.content['works']['entry']

@@ -1,16 +1,5 @@
 {
     "type": "bubble",
-    "hero": {
-      "type": "image",
-      "url": "https://imgur.com/gTDvWf5.png",
-      "size": "full",
-      "aspect_ratio": "20:13",
-      "aspect_mode": "cover",
-      "action": {
-        "type": "uri",
-        "uri": "http://linecorp.com/"
-      }
-    },
     "body": {
       "type": "box",
       "layout": "vertical",
