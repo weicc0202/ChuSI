@@ -22,6 +22,7 @@ def updateLogs(userId, types, db=None):
     response = table.put_item(
        Item={
             'tid': uuid.uuid4().hex,
+            'userId': userId,
             'types': types
         }
     )
