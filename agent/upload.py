@@ -25,7 +25,7 @@ def updateLogs(userId, types, db=None):
             'tid': uuid.uuid4().hex,
             'userId': userId,
             'types': types,
-            'timestamp': time.time()
+            'timestamp': int(time.time())
         }
     )
     return response
