@@ -1,6 +1,6 @@
 from resume.resume import EnglishResume
 from linebot.models import (
-    TextSendMessage, ImageSendMessage
+    TextSendMessage, FlexSendMessage
 )
 import os
 import sys
@@ -71,12 +71,6 @@ class BasicAgent():
             replyMessage += [self.resume.wrapMessage(title='skills', types=types)]
             replyMessage += [self.resume.suggest(types=types)]
         else:
-            qrcode = 'https://imgur.com/32eTpuX.png'
-            replyMessage += [TextSendMessage(text='Sorry, I cannot understand...')]
-            replyMessage += [TextSendMessage(text='Check out my Github to follow the latest feature and future plan.')]
-            replyMessage += [ImageSendMessage(
-                original_content_url=qrcode,
-                preview_image_url=qrcode
-            )]
+            replyMessage += self.resume.exceptions()
             replyMessage += [self.resume.wrapMessage(title='others')]
         self.__reply(event, replyMessage)

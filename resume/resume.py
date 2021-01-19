@@ -64,6 +64,26 @@ class EnglishResume():
             content = self.content[title]['details'][types]
         return FlexSendMessage(alt_text='Hello!', contents=content)
 
+    def exceptions(self):
+        replyMessage = []
+        replyMessage += [TextSendMessage(text='Sorry, I cannot understand...')]
+        replyMessage += [TextSendMessage(text='Check out my Github to follow the latest feature and future plan.')]
+        replyMessage += [FlexSendMessage(alt_text='Hello!', contents={
+            "type": "bubble",
+            "hero": {
+                "type": "image",
+                "url": "https://i.imgur.com/gTDvWf5.png",
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover",
+                "action": {
+                "type": "uri",
+                "label": "My Github",
+                "uri": "https://github.com/weicc0202/ChuSI/"
+                }
+            }
+        })]
+        return replyMessage
 
     def __suggest(self, types='works'):
         choices = []
@@ -93,8 +113,8 @@ class EnglishResume():
                 "type": "image",
                 "url": "https://i.pinimg.com/originals/7b/39/c6/7b39c67abc82d534cc91a3e6c4cd8609.gif",
                 "size": "full",
-                "aspectRatio": "20:13",
-                "aspectMode": "cover"
+                "aspect_ratio": "20:13",
+                "aspect_mode": "cover"
             }
         })]
         messages += [FlexSendMessage(alt_text='Hello!', contents=self.content['welcome'])]
