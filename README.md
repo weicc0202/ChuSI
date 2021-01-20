@@ -1,11 +1,17 @@
 
 
-ChuSI 
+ChuSI  
 ==================================================================================================
-> An chatbot to introduce yourself by understanding your resume.
+
+> An chatbot to introduce yourself by understanding your resume. 
 
 
-## Version 0.2.0
+<p align="center">
+  <img width="200" height="200" src="https://i.imgur.com/gTDvWf5.png">
+</p>
+
+
+## Version 0.2.0 
 
 <img align="right" src="https://imgur.com/Jr8YwzM.gif?row=true" height="440">
 
