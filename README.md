@@ -1,13 +1,12 @@
-<a href="https://github.com/weicc0202/">
-    <img src="https://i.imgur.com/gTDvWf5.png" alt="Aimeos logo" title="Aimeos" align="right"/>
-</a>
 
-ChuSI
-===================================
 
+ChuSI 
+==================================================================================================
 > An chatbot to introduce yourself by understanding your resume.
 
+
 ## Version 0.2.0
+
 <img align="right" src="https://imgur.com/Jr8YwzM.gif?row=true" height="440">
 
 **For version 0.2.0, ChuSI is only tested on iOS devices**
