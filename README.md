@@ -1,9 +1,11 @@
 <a href="https://github.com/weicc0202/">
     <img src="https://i.imgur.com/gTDvWf5.png" alt="Aimeos logo" title="Aimeos" align="right"/>
 </a>
+
 ChuSI
-======================
-> An chatbot to introduce yourself by understanding your resume and provide an interface to track user behaviors with cloud service.
+===================================
+
+> An chatbot to introduce yourself by understanding your resume.
 
 ## Version 0.2.0
 <img align="right" src="https://imgur.com/Jr8YwzM.gif?row=true" height="440">
