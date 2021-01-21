@@ -3,7 +3,7 @@
 ChuSI  
 ==================================================================================================
 
-> An chatbot to introduce yourself by understanding your resume. 
+> A LINE chatbot to introduce yourself by understanding your resume. 
 
 
 <p align="center">
