@@ -1,5 +1,5 @@
 .git
 .vscode
 secretToken.txt
-*/nlu_model.log
-*/errors.log
+*nlu_model.log
+*errors.log
