@@ -1,0 +1,377 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "heys"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello there"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
+        "intent": "greet",
+        "text": "let's go"
+      },
+      {
+        "intent": "greet",
+        "text": "hey dude"
+      },
+      {
+        "intent": "greet",
+        "text": "goodmorning"
+      },
+      {
+        "intent": "greet",
+        "text": "goodevening"
+      },
+      {
+        "intent": "greet",
+        "text": "good afternoon"
+      },
+      {
+        "intent": "greet",
+        "text": "just going to say hi"
+      },
+      {
+        "intent": "greet",
+        "text": "heya"
+      },
+      {
+        "intent": "greet",
+        "text": "hello hi"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "greetings"
+      },
+      {
+        "intent": "greet",
+        "text": "hello again"
+      },
+      {
+        "intent": "greet",
+        "text": "I greet you"
+      },
+      {
+        "intent": "goodbye",
+        "text": "good afternoon"
+      },
+      {
+        "intent": "goodbye",
+        "text": "good by"
+      },
+      {
+        "intent": "goodbye",
+        "text": "cee you later"
+      },
+      {
+        "intent": "goodbye",
+        "text": "good night"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "have a nice day"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you around"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you later"
+      },
+      {
+        "intent": "goodbye",
+        "text": "88"
+      },
+      {
+        "intent": "confirm",
+        "text": "yes"
+      },
+      {
+        "intent": "confirm",
+        "text": "y"
+      },
+      {
+        "intent": "confirm",
+        "text": "indeed"
+      },
+      {
+        "intent": "confirm",
+        "text": "of course"
+      },
+      {
+        "intent": "confirm",
+        "text": "that sounds good"
+      },
+      {
+        "intent": "confirm",
+        "text": "correct"
+      },
+      {
+        "intent": "deny",
+        "text": "no"
+      },
+      {
+        "intent": "deny",
+        "text": "n"
+      },
+      {
+        "intent": "deny",
+        "text": "never"
+      },
+      {
+        "intent": "deny",
+        "text": "I don't think so"
+      },
+      {
+        "intent": "deny",
+        "text": "don't like that"
+      },
+      {
+        "intent": "deny",
+        "text": "no way"
+      },
+      {
+        "intent": "deny",
+        "text": "not really"
+      },
+      {
+        "intent": "projects",
+        "text": "Projects"
+      },
+      {
+        "intent": "projects",
+        "text": "Show me your projects"
+      },
+      {
+        "intent": "projects",
+        "text": "What are your academic projects"
+      },
+      {
+        "intent": "projects",
+        "text": "What projects have you done?"
+      },
+      {
+        "intent": "projects",
+        "text": "project"
+      },
+      {
+        "intent": "education",
+        "text": "Education Qualifications"
+      },
+      {
+        "intent": "education",
+        "text": "Education"
+      },
+      {
+        "intent": "education",
+        "text": "What can you say about your Education?"
+      },
+      {
+        "intent": "education",
+        "text": "Let me know of your Education"
+      },
+      {
+        "intent": "education",
+        "text": "Let me know of your Educational Qualifications"
+      },
+      {
+        "intent": "work_experience",
+        "text": "What projects have you worked on as a professional"
+      },
+      {
+        "intent": "work_experience",
+        "text": "What have you done in your professional life"
+      },
+      {
+        "intent": "work_experience",
+        "text": "What have you done in industry so far"
+      },
+      {
+        "intent": "work_experience",
+        "text": "Where have you worked before?"
+      },
+      {
+        "intent": "work_experience",
+        "text": "Show me your work experience"
+      },
+      {
+        "intent": "work_experience",
+        "text": "Can you tell me about your work experience"
+      },
+      {
+        "intent": "work_experience",
+        "text": "experience working"
+      },
+      {
+        "intent": "work_experience",
+        "text": "work ex."
+      },
+      {
+        "intent": "work_experience",
+        "text": "work experience"
+      },
+      {
+        "intent": "skills",
+        "text": "programming languages"
+      },
+      {
+        "intent": "skills",
+        "text": "which programming language do you know?"
+      },
+      {
+        "intent": "skills",
+        "text": "show me your skills"
+      },
+      {
+        "intent": "skills",
+        "text": "which skill set do you acquire?"
+      },
+      {
+        "intent": "skills",
+        "text": "which skills do you acquire?"
+      },
+      {
+        "intent": "skills",
+        "text": "skill set"
+      },
+      {
+        "intent": "skills",
+        "text": "what are your skills?"
+      },
+      {
+        "intent": "skills",
+        "text": "skills"
+      },
+      {
+        "intent": "bot_abilities",
+        "text": "Suggest me what can I learn"
+      },
+      {
+        "intent": "bot_abilities",
+        "text": "What can you show me?"
+      },
+      {
+        "intent": "bot_abilities",
+        "text": "What can you do?"
+      },
+      {
+        "intent": "bot_abilities",
+        "text": "Show me more"
+      },
+      {
+        "intent": "bot_abilities",
+        "text": "What can I learn about Anshul?"
+      },
+      {
+        "intent": "bot_abilities",
+        "text": "What can I know about Anshul?"
+      },
+      {
+        "intent": "bot_abilities",
+        "text": "What can you tell me about Anshul?"
+      },
+      {
+        "intent": "bot_challenge",
+        "text": "are you a bot?"
+      },
+      {
+        "intent": "bot_challenge",
+        "text": "are you a human?"
+      },
+      {
+        "intent": "bot_challenge",
+        "text": "am I talking to a bot?"
+      },
+      {
+        "intent": "bot_challenge",
+        "text": "am I talking to a human?"
+      },
+      {
+        "intent": "about_me",
+        "text": "Can you tell me about Weichu?"
+      },
+      {
+        "intent": "about_me",
+        "text": "Who is Weichu?"
+      },
+      {
+        "intent": "about_me",
+        "text": "About Weichu"
+      },
+      {
+        "intent": "about_me",
+        "text": "about weichu"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "I want to order food"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "What is 2 + 2?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "Who's the US President?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "pekopekopekopeko"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "fuck you"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "aiufhkauseghjkeljh"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

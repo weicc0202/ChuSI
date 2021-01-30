@@ -1,0 +1,90 @@
+[
+    {
+        "text": "good afternoon",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "goodbye",
+            "confidence": 0.35710883437480656
+        }
+    },
+    {
+        "text": "yes",
+        "intent": "confirm",
+        "intent_prediction": {
+            "name": "greet",
+            "confidence": 0.4857861477540609
+        }
+    },
+    {
+        "text": "y",
+        "intent": "confirm",
+        "intent_prediction": {
+            "name": "goodbye",
+            "confidence": 0.29477755745655343
+        }
+    },
+    {
+        "text": "indeed",
+        "intent": "confirm",
+        "intent_prediction": {
+            "name": "greet",
+            "confidence": 0.41115588875825265
+        }
+    },
+    {
+        "text": "of course",
+        "intent": "confirm",
+        "intent_prediction": {
+            "name": "goodbye",
+            "confidence": 0.21497635726975567
+        }
+    },
+    {
+        "text": "that sounds good",
+        "intent": "confirm",
+        "intent_prediction": {
+            "name": "greet",
+            "confidence": 0.37032428588897226
+        }
+    },
+    {
+        "text": "correct",
+        "intent": "confirm",
+        "intent_prediction": {
+            "name": "greet",
+            "confidence": 0.37486005120235893
+        }
+    },
+    {
+        "text": "I want to order food",
+        "intent": "out_of_scope",
+        "intent_prediction": {
+            "name": "greet",
+            "confidence": 0.19998690237903421
+        }
+    },
+    {
+        "text": "pekopekopekopeko",
+        "intent": "out_of_scope",
+        "intent_prediction": {
+            "name": "goodbye",
+            "confidence": 0.252257235529251
+        }
+    },
+    {
+        "text": "fuck you",
+        "intent": "out_of_scope",
+        "intent_prediction": {
+            "name": "greet",
+            "confidence": 0.4006212545374545
+        }
+    },
+    {
+        "text": "aiufhkauseghjkeljh",
+        "intent": "out_of_scope",
+        "intent_prediction": {
+            "name": "greet",
+            "confidence": 0.3915805491062698
+        }
+    }
+]

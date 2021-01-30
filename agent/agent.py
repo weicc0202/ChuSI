@@ -1,13 +1,17 @@
 from resume.resume import EnglishResume
 from agent.upload import updateLogs
+from engine.nlu import interpret
 from linebot.models import (
     TextSendMessage, FlexSendMessage
 )
+from rasa_nlu.model import Interpreter
+
 import os
 import sys
 
 class BasicAgent():
-    def __init__(self, botApi=None):
+    def __init__(self, nlu_model, botApi=None):
+        self.interpreter = Interpreter.load(nlu_model) 
         self.history = []
         self.resume = None
         self.botApi = botApi
@@ -35,6 +39,8 @@ class BasicAgent():
     def reply(self, event):
         replyToken, message = event.reply_token, event.message.text
         response, replyMessage = None, []
+        # intent = interpret(message, self.interpreter)
+
         if message == 'Show Others':
             replyMessage += [self.resume.wrapMessage(title='others')]
         elif message == 'Show Work Experience':
